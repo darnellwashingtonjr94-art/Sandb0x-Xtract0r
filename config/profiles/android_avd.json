@@ -1,0 +1,15 @@
+{
+  "profile_name": "android_avd_default",
+  "target_os": "Android 13.0 (API 33)",
+  "avd_name": "Pixel_6_API_33",
+  "execution": {
+    "timeout_seconds": 180,
+    "grant_all_permissions": true,
+    "enable_frida": true
+  },
+  "extraction": {
+    "logcat_tags": ["ActivityManager", "Dalvik", "Frida"],
+    "capture_pcap": true,
+    "dump_shared_preferences": true
+  }
+}
