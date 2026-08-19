@@ -1,6 +1,9 @@
 version: '3.8'
 
 services:
+  # ---------------------------------------------------------
+  # 1. ORCHESTRATOR (CLI Controller)
+  # ---------------------------------------------------------
   orchestrator:
     build:
       context: .
@@ -9,28 +12,56 @@ services:
     volumes:
       - ./storage:/app/storage
       - ./config:/app/config
+      - ./src:/app/src  # Added for hot-reloading Python code
     env_file:
       - .env
     depends_on:
       - redis
+    # This will run the specific file, enqueue the task, and exit.
     command: python src/main.py --file storage/samples/sample.exe --platform auto
 
+  # ---------------------------------------------------------
+  # 2. REDIS (Message Broker for Celery)
+  # ---------------------------------------------------------
   redis:
     image: redis:7-alpine
     container_name: sandbox_redis
     ports:
       - "6379:6379"
 
+  # ---------------------------------------------------------
+  # 3. CELERY WORKER (The Execution Engine)
+  # ---------------------------------------------------------
   celery_worker:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: sandbox_worker
+    privileged: true  # CRITICAL: Required for QEMU/Firecracker virtualization
+    devices:
+      - "/dev/kvm:/dev/kvm" # CRITICAL: Hardware acceleration for VMs
     volumes:
       - ./storage:/app/storage
       - ./config:/app/config
+      - ./src:/app/src
+      - /var/run/docker.sock:/var/run/docker.sock # CRITICAL: Allows worker to spawn sub-containers
     env_file:
       - .env
     depends_on:
       - redis
     command: celery -A src.orchestrator.scheduler worker --loglevel=info
+
+  # ---------------------------------------------------------
+  # 4. ANDROID SANDBOX (Always-on target for APKs)
+  # ---------------------------------------------------------
+  redroid_sandbox:
+    image: redroid/redroid:11.0.0-latest
+    container_name: sandbox_redroid
+    privileged: true
+    volumes:
+      - redroid_data:/data
+    ports:
+      - "5555:5555"
+
+volumes:
+  redroid_data:
