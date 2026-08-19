@@ -1,0 +1,19 @@
+{
+  "profile_name": "win10_x64_qemu",
+  "target_os": "Windows 10 Enterprise x64",
+  "qemu": {
+    "ram_mb": 4096,
+    "smp_cores": 2,
+    "drive_image": "/var/lib/vm/win10.qcow2",
+    "snapshot_tag": "clean_base"
+  },
+  "execution": {
+    "timeout_seconds": 240,
+    "human_simulation": true
+  },
+  "extraction": {
+    "memory_dump": true,
+    "registry_diff": true,
+    "pcap_capture": true
+  }
+}
