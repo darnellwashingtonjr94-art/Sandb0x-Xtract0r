@@ -1,0 +1,15 @@
+{
+  "profile_name": "container_ebpf_runtime",
+  "target_runtime": "Docker / AWS Firecracker",
+  "base_image": "ubuntu:22.04",
+  "execution": {
+    "timeout_seconds": 120,
+    "drop_capabilities": false,
+    "ebpf_probes": ["execve", "connect", "openat"]
+  },
+  "extraction": {
+    "kernel_logs": true,
+    "pcap_capture": true,
+    "diff_rootfs": true
+  }
+}
