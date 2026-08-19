@@ -2,7 +2,7 @@ import os
 from google import genai
 from anthropic import Anthropic
 from openai import OpenAI
-from llm_bot.prompts import SYSTEM_PROMPTS
+from src.llm_bot.prompts import SYSTEM_PROMPTS
 
 class MultiLLMGateway:
     """Unified client gateway querying Gemini, Claude, and ChatGPT/Codex."""
