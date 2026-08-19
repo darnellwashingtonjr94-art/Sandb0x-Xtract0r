@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-sandbox-dark text-slate-200 min-h-screen font-sans antialiased;
+}
+
+/* Custom scrollbar for raw log blocks */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-sandbox-dark;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-full;
+}
