@@ -30,7 +30,7 @@ jobs:
         
     - name: Run PyTest with Coverage
       env:
-        PYTHONPATH: .
+        PYTHONPATH: .:src
       run: |
         pytest tests/ --cov=src --cov-report=xml
         
