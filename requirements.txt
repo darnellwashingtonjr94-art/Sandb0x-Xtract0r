@@ -1,0 +1,12 @@
+google-genai>=0.1.1
+anthropic>=0.18.0
+openai>=1.12.0
+python-magic>=0.4.27
+pyyaml>=6.0.1
+pydantic>=2.6.0
+celery>=5.3.6
+redis>=5.0.1
+requests>=2.31.0
+markdown2>=2.4.12
+pdfkit>=1.0.0
+pytest>=8.0.0
