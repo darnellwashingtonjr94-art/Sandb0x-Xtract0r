@@ -1,0 +1,48 @@
+import { useEffect, useState } from 'react';
+import ReactMarkdown from 'react-markdown';
+import { fetchReport } from '../api/client';
+import { FileText, Loader } from 'lucide-react';
+
+export default function ReportViewer({ taskId }) {
+  const [report, setReport] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    if (!taskId) return;
+    
+    // Poll for the report every 5 seconds until it exists
+    const interval = setInterval(async () => {
+      try {
+        const text = await fetchReport(taskId);
+        setReport(text);
+        clearInterval(interval);
+      } catch (err) {
+        setError("Waiting for AI Threat Report synthesis...");
+      }
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [taskId]);
+
+  if (!taskId) return null;
+
+  return (
+    <div className="bg-sandbox-card p-6 rounded-xl shadow-lg border border-slate-700 mt-6">
+      <h2 className="text-xl font-bold mb-4 flex items-center gap-2 border-b border-slate-700 pb-2">
+        <FileText className="text-green-400" />
+        Multi-LLM Threat Report: {taskId}
+      </h2>
+      
+      {!report ? (
+        <div className="flex items-center gap-3 text-slate-400 p-8 justify-center">
+          <Loader className="animate-spin" />
+          {error || "Analyzing telemetry..."}
+        </div>
+      ) : (
+        <div className="prose prose-invert max-w-none">
+          <ReactMarkdown>{report}</ReactMarkdown>
+        </div>
+      )}
+    </div>
+  );
+}
