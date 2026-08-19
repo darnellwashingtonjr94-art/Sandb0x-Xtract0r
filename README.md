@@ -95,31 +95,37 @@ It bridges the gap between low-level kernel tracing and high-level artificial in
    ```bash
    git clone [https://github.com/credkellarboop/Sandb0x-Xtract0r.git](https://github.com/credkellarboop/Sandb0x-Xtract0r.git)
    cd Sandb0x-Xtract0r
+  
+</div>
 
+## 📂 Full Project Structure
+
+```text
 Sandb0x-Xtract0r/
-├── .env.example              # Template for API keys and sandbox paths
-├── .github/                  # CI/CD workflows for testing and Docker builds
-├── .gitignore                # Untracked files configuration
-├── config/                   # Sandbox hardware profiles (JSON configurations)
-├── docker-compose.yml        # Multi-container orchestration setup
-├── Dockerfile                # Orchestrator and worker container build instructions
-├── docs/                     # Architecture and API reference documentation
-├── frontend/                 # React UI, Tailwind CSS, and frontend components
-├── IMG_1220.png              # Project banner image
-├── LICENSE                   # MIT License
-├── README.md                 # Project documentation
-├── requirements.txt          # Python dependencies
-├── scripts/                  # Shell scripts for setup and CLI detonation
-├── src/                      # Core backend application
-│   ├── api/                  # FastAPI server, routers, and endpoints
-│   ├── extractors/           # eBPF, memory, network, and process parsers
-│   ├── llm_bot/              # AI gateway, prompt engineering, and synthesis logic
-│   ├── orchestrator/         # File routing and asynchronous task scheduling
-│   ├── sandboxes/            # Environment runners (Cloud, Hardware, Mobile, PC)
-│   ├── bot.py                # Standalone bot execution script
-│   └── main.py               # Application entry point
-├── storage/                  # Local directory for samples, artifacts, and reports
-└── tests/                    # Unit tests for extractors, LLM logic, and routing
+├── [ 📄 ] .env.example              > Template for API keys and sandbox paths
+├── [ 📁 ] .github/                  > CI/CD workflows for testing and Docker builds
+├── [ 📄 ] .gitignore                > Untracked files configuration
+├── [ 📁 ] config/                   > Sandbox hardware profiles (JSON)
+├── [ 🐳 ] docker-compose.yml        > Multi-container orchestration setup
+├── [ 🐳 ] Dockerfile                > Orchestrator and worker container build
+├── [ 📚 ] docs/                     > Architecture and API reference docs
+├── [ 🎨 ] frontend/                 > React UI, Tailwind CSS, components
+├── [ 🖼️ ] IMG_1220.png              > Project banner image
+├── [ ⚖️ ] LICENSE                   > MIT License
+├── [ 📖 ] README.md                 > Project documentation
+├── [ 📦 ] requirements.txt          > Python dependencies
+├── [ 🛠️ ] scripts/                  > Shell scripts for setup and CLI detonation
+├── [ 💻 ] src/                      > Core backend application
+│    ┣━ [ 🔌 ] api/                  > FastAPI server, routers, and endpoints
+│    ┣━ [ 🔍 ] extractors/           > eBPF, memory, network, and process parsers
+│    ┣━ [ 🧠 ] llm_bot/              > AI gateway, prompt engineering, synthesis
+│    ┣━ [ ⚙️ ] orchestrator/         > File routing and async task scheduling
+│    ┣━ [ 📦 ] sandboxes/            > Environment runners (Cloud, Hardware, Mobile, PC)
+│    ┣━ [ 🤖 ] bot.py                > Standalone bot execution script
+│    ┗━ [ 🚀 ] main.py               > Application entry point
+├── [ 🗄️ ] storage/                  > Local directory for samples, artifacts, reports
+└── [ 🧪 ] tests/                    > Unit tests for extractors, LLM logic, routing
+                 # Unit tests for extractors, LLM logic, and routing
 
 </div>
 
