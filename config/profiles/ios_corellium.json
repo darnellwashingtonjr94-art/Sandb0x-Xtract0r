@@ -1,0 +1,14 @@
+{
+  "profile_name": "ios_corellium_default",
+  "target_os": "iOS 16.5",
+  "device_model": "iPhone 13",
+  "execution": {
+    "timeout_seconds": 180,
+    "frida_scripts": ["jailbreak_detection_bypass.js", "api_logger.js"]
+  },
+  "extraction": {
+    "syslog_capture": true,
+    "pcap_capture": true,
+    "keychain_dump": true
+  }
+}
