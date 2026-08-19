@@ -31,29 +31,25 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      # 3. Format image tags & force lowercasing
+      # 3. Extract Docker metadata (using 'lower()' to handle lowercase repository names)
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: |
-            ghcr.io/${{ github.repository_owner }}/sandbox-api
+            ghcr.io/${{ string(github.repository_owner) }}/sandbox-api
             ${{ secrets.DOCKERHUB_USERNAME }}/sandbox-api
           tags: |
             type=raw,value=latest
             type=sha
+          flavor: |
+            lower=true
 
-      # 4. Lowercase repository string fix
-      - name: Lowercase image names
-        id: lowercase
-        run: |
-          echo "tags=$(echo "${{ steps.meta.outputs.tags }}" | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
-
-      # 5. Build and push image
+      # 4. Build and push Docker image
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ${{ steps.lowercase.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
