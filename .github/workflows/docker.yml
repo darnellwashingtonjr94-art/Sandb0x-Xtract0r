@@ -9,7 +9,6 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-    # This permissions block is the new addition fixing the push error
     permissions:
       contents: read
       packages: write
@@ -25,6 +24,7 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
+      # 1. Log in to GitHub Container Registry
       - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
@@ -32,12 +32,21 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # 2. Log in to Docker Hub (Added back)
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
       - name: Extract Docker metadata
         id: meta
         uses: docker/metadata-action@v5
         with:
+          # Tell GitHub to generate tags for BOTH registries
           images: |
             ghcr.io/${{ env.OWNER_LC }}/sandbox-api
+            ${{ secrets.DOCKERHUB_USERNAME }}/sandbox-api
           tags: |
             type=raw,value=latest
             type=sha
