@@ -2,17 +2,52 @@
   <img src="IMG_1220.png" alt="Sandb0x-Xtract0r Logo" width="600">
 </p>
 
-# Sandb0x-Xtract0r
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Sandb0x-Xtract0r /
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![React](https://img.shields.io/badge/React-UI-61DAFB?logo=react&logoColor=black)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![Redis](https://img.shields.io/badge/Redis-Task_Broker-DC382D?logo=redis&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![AI Engine](https://img.shields.io/badge/AI_Engine-Gemini_|_Claude_|_OpenAI-9cf?logo=openai&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
-[![CI/CD](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml/badge.svg)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Tech Stack
+
+### Core Programming Languages, Core Systems
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
+![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+
+### Platform Support & Hardware Architecture
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
+![NVIDIA](https://img.shields.io/badge/NVIDIA_H100_|_RTX_5090-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![Monad](https://img.shields.io/badge/Monad_Network-8A2BE2?style=for-the-badge&logo=web3.js&logoColor=white)
+
+### Low-Level Infrastructure & Performance
+![CUDA](https://img.shields.io/badge/CUDA_Compute-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![LLVM](https://img.shields.io/badge/LLVM_IR-222C37?style=for-the-badge&logo=llvm&logoColor=white)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-654FF0?style=for-the-badge&logo=webassembly&logoColor=white)
+![eBPF](https://img.shields.io/badge/eBPF_Tracing-FFCA28?style=for-the-badge&logo=linux&logoColor=black)
+
+### Cybersecurity & Offensive Auditing
+![Hardware Hacking](https://img.shields.io/badge/HackRF_|_Proxmark3-DC382D?style=for-the-badge&logo=hackaday&logoColor=white)
+![Network Recon](https://img.shields.io/badge/Network_Reconnaissance-000000?style=for-the-badge&logo=kali-linux&logoColor=white)
+![Malware Analysis](https://img.shields.io/badge/Heuristic_Scanning-4B32C3?style=for-the-badge&logo=owasp&logoColor=white)
+
+### DevOps & Build Tools
+![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
+![Docker Hub](https://img.shields.io/badge/Docker_Hub-0db7ed?style=for-the-badge&logo=docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Buildozer](https://img.shields.io/badge/Buildozer_|_Kivy-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+### Artificial Intelligence & Quantum
+![Gemini](https://img.shields.io/badge/Gemini_1.5-8E75B2?style=for-the-badge&logo=google-gemini&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude_3.5-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white)
+![Cognitive Engine](https://img.shields.io/badge/Tri--State_ASI-000000?style=for-the-badge&logo=databricks&logoColor=white)
+
+### Cloud Providers
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 
 </div>
 
