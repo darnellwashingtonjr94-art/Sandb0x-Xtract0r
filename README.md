@@ -4,14 +4,14 @@
 
 # Sandb0x-Xtract0r
 
-[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![React](https://img.shields.io/badge/React-UI-61DAFB?logo=react&logoColor=black)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![Redis](https://img.shields.io/badge/Redis-Task_Broker-DC382D?logo=redis&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![AI Engine](https://img.shields.io/badge/AI_Engine-Gemini_|_Claude_|_OpenAI-9cf?logo=openai&logoColor=white)](https://github.com/credkellarboop/Sandb0x-Xtract0r)
-[![CI/CD](https://github.com/credkellarboop/Sandb0x-Xtract0r/actions/workflows/test.yml/badge.svg)](https://github.com/credkellarboop/Sandb0x-Xtract0r/actions)
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![React](https://img.shields.io/badge/React-UI-61DAFB?logo=react&logoColor=black)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![FastAPI](https://img.shields.io/badge/FastAPI-API-009688?logo=fastapi&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![Redis](https://img.shields.io/badge/Redis-Task_Broker-DC382D?logo=redis&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![AI Engine](https://img.shields.io/badge/AI_Engine-Gemini_|_Claude_|_OpenAI-9cf?logo=openai&logoColor=white)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r)
+[![CI/CD](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml/badge.svg)](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
