@@ -11,11 +11,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libmagic1 \
     tshark \
     wkhtmltopdf \
+    qemu-system-x86 \
     qemu-utils \
-    android-tools-adb \
+    adb \
+    docker.io \
     git \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
