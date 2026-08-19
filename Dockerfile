@@ -1,4 +1,4 @@
-FROM python:3.11-slim
+FROM python:3.11-slim-bullseye
 
 ENV PYTHONUNBUFFERED=1 \
     DEBIAN_FRONTEND=noninteractive
@@ -19,10 +19,3 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-RUN mkdir -p storage/samples storage/artifacts storage/reports
-
-ENTRYPOINT ["python", "src/main.py"]
-CMD ["--help"]
