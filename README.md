@@ -122,5 +122,33 @@ cp .env.example .env
 (Edit the new ⁠.env⁠ file with your preferred text editor to add your specific API keys and paths).
 
 🚀 Quick Start (One-Command Docker Setup)
+
 The sandbox architecture consists of multiple services (Orchestrator, Celery Worker, Redis, and Redroid Android Sandbox) connected via Docker Compose.
+
 To build and spin up the entire sandbox environment in detached mode, run:
+
+SandB0x-Xtract0r/
+├── [ 📄 ] .env.example
+├── [ 📁 ] .github/
+│   ├── [ 📁 ] ISSUE_TEMPLATE/
+│   └── [ 📁 ] workflows/
+├── [ 🚫 ] .gitignore
+├── [ 📁 ] config/
+├── [ 🐳 ] docker-compose.yml
+├── [ 📚 ] docs/
+├── [ 🖥️ ] frontend/
+├── [ 🖼️ ] IMG_1220.png
+├── [ ⚖️ ] LICENSE
+├── [ 📖 ] README.md
+├── [ 📦 ] requirements.txt
+├── [ 🛠️ ] scripts/
+├── [ 📁 ] src/
+│   ├── [ 🔌 ] api/
+│   ├── [ 🔍 ] extractors/
+│   ├── [ 🧠 ] llm_bot/
+│   ├── [ ⚙️ ] orchestrator/
+│   ├── [ 📦 ] sandboxes/
+│   ├── [ 🤖 ] bot.py
+│   └── [ 🚀 ] main.py
+├── [ 💾 ] storage/
+└── [ 🧪 ] tests/
