@@ -53,25 +53,41 @@ https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74
 
 ---
 
-## What is this?
+## What is this?<p align="center">
+  <img src="IMG_1220.png" alt="SandB0x-Xtract0r Logo" width="600">
+</p>
 
-**Sandb0x-Xtract0r** is an automated, cross-platform security analysis engine. It provides a unified environment to safely detonate suspicious files, binaries, and applications across PC, mobile, and cloud environments. While the payload executes, the system captures runtime telemetry, network traces, and memory dumps, which are then synthesized into structured threat reports by an integrated multi-LLM bot.
+<h1 align="center">SandB0x-Xtract0r</h1>
 
-⁠## Simplified Summary 
+<p align="center">
+  <strong>An automated, cross-platform security analysis engine for safely detonating suspicious files, binaries, and applications.</strong><br>
+  <a href="https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74179">🎬 Watch the Project Demo</a>
+</p>
 
-Imagine you find a mystery package on your porch, but you aren't sure if it's a cool toy or a messy glitter bomb. 
+---
 
-Instead of opening it in your living room, you put the package inside a thick, clear plastic box in your backyard. You use robotic arms to open it while cameras record exactly what happens. If it explodes, the mess stays completely trapped in the box, and your house is safe! 
+## 📖 What is this?
 
-**Sandb0x-Xtract0r** is that clear plastic box, but for computer files. When you find a mystery file, this program puts it inside a fake, trapped computer (the plastic box) and opens it. It watches everything the file does, takes notes, and then has a super-smart robot read the notes to tell you exactly how dangerous the mystery file was.
+**SandB0x-Xtract0r** provides a unified environment to execute payloads across PC, mobile, and cloud environments. While the payload executes, the system captures runtime telemetry, network traces, and memory dumps, which are then synthesized into structured threat reports by an integrated multi-LLM bot.
 
-## What this does?
+### 💡 Simplified Summary
+Imagine you find a mystery package on your porch, but you aren't sure if it's a cool toy or a messy glitter bomb. Instead of opening it in your living room, you put the package inside a thick, clear plastic box in your backyard. You use robotic arms to open it while cameras record exactly what happens. If it explodes, the mess stays completely trapped, and your house is safe!
+
+**SandB0x-Xtract0r** is that clear plastic box for computer files. It puts a mystery file inside a fake, trapped computer, watches everything it does, takes notes, and uses a smart AI robot to read those notes and tell you exactly how dangerous the file was.
+
+---
+
+## ✨ Core Features
+
 * **Dynamic Detonation:** Safely executes malware, scripts, and applications targeting Windows, Linux, Android, iOS, and cloud containers.
 * **Deep Telemetry Extraction:** Monitors and captures real-time system calls (via eBPF), network traffic (PCAPs), filesystem modifications, and RAM artifacts (memory dumping).
 * **AI-Powered Synthesis:** Feeds raw execution telemetry into a multi-LLM gateway (utilizing Gemini, Claude, and OpenAI) to translate complex hexadecimal and machine-level behaviors into readable, MITRE ATT&CK-mapped threat intelligence reports.
 * **Automated Orchestration:** Uses a Celery and Redis task queue to manage multiple sandbox environments concurrently without bottlenecking the main API.
 
-## How does this works?
+---
+
+## 🛠️ How does this work?
+
 1. **Submission:** A user uploads a suspicious file via the React-based frontend UI or directly through the FastAPI endpoint.
 2. **File Routing:** The Orchestrator inspects the file's magic bytes to automatically detect the target platform (e.g., routing an APK to the Redroid Android emulator, or an ELF file to a Linux Firecracker microVM).
 3. **Execution & Tracing:** The payload is injected into the highly isolated sandbox. Hooks record API calls, network requests, and spawned processes.
@@ -79,60 +95,34 @@ Instead of opening it in your living room, you put the package inside a thick, c
 5. **LLM Analysis:** The normalized telemetry is sent to the `llm_bot`, which queries the configured AI models to write a comprehensive security assessment.
 6. **Reporting:** The user receives a detailed Markdown or PDF report detailing the payload's intent, lateral movement, and C2 (Command and Control) activity.
 
-## What problems this solves?
-* **Platform Fragmentation:** Security researchers usually need entirely different toolchains to analyze an Android APK versus a Windows executable. Sandb0x-Xtract0r centralizes all analysis into one pipeline.
+---
+
+## 🎯 What problems does this solve?
+
+* **Platform Fragmentation:** Security researchers usually need entirely different toolchains to analyze an Android APK versus a Windows executable. SandB0x-Xtract0r centralizes all analysis into one pipeline.
 * **Information Overload:** Sifting through thousands of lines of raw system calls and unreadable memory dumps is exhausting. The multi-LLM integration does the heavy lifting, instantly surfacing the most critical threats.
 * **Infrastructure Management:** Automatically spins up, resets, and tears down virtualization environments (QEMU, Redroid, Corellium) for every single run, ensuring a clean slate and preventing cross-contamination.
 
-## Why is this so cool?
-It bridges the gap between low-level kernel tracing and high-level artificial intelligence. By combining hardware virtualization, modern eBPF tracing, and the latest reasoning capabilities of models like Claude 3.5 Sonnet and Gemini 1.5 Pro, Sandb0x-Xtract0r acts as an automated, highly-scalable junior malware analyst that never needs to sleep.
+---
 
-## How to install this?
+## 💻 Installation & Setup
 
 **Prerequisites:** Docker, Docker Compose, and a Linux host (recommended for KVM/hardware acceleration).
 
-1. **Clone the repository:**
-   ```bash
-   git clone (https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
-   cd Sandb0x-Xtract0r
-  
-## ⚙️ Configuration & Environment Setup
+### 1. Clone the repository
+```bash
+git clone [https://github.com/darnellwashington94-art/Sandb0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
+cd Sandb0x-Xtract0r
 
-Before running the sandbox pipeline, you must configure your API keys and environment variables. A template file (`.env.example`) is provided in the root repository.
+-----------------------
 
-1. **Copy the template environment file:**
-   ```bash
-   cp .env.example .env
+### 2. Configuration & Environment Setup
+Before running the sandbox pipeline, you must configure your API keys and environment variables. A template file (⁠.env.example⁠) is provided in the root repository.
 
-</div>
+cp .env.example .env
 
-## 📂 Full Project Structure
+(Edit the new ⁠.env⁠ file with your preferred text editor to add your specific API keys and paths).
 
-```text
-Sandb0x-Xtract0r/
-├── [ 📄 ] .env.example              > Template for API keys and sandbox paths
-├── [ 📁 ] .github/                  > CI/CD workflows for testing and Docker builds
-├── [ 📄 ] .gitignore                > Untracked files configuration
-├── [ 📁 ] config/                   > Sandbox hardware profiles (JSON)
-├── [ 🐳 ] docker-compose.yml        > Multi-container orchestration setup
-├── [ 🐳 ] Dockerfile                > Orchestrator and worker container build
-├── [ 📚 ] docs/                     > Architecture and API reference docs
-├── [ 🎨 ] frontend/                 > React UI, Tailwind CSS, components
-├── [ 🖼️ ] IMG_1220.png              > Project banner image
-├── [ ⚖️ ] LICENSE                   > MIT License
-├── [ 📖 ] README.md                 > Project documentation
-├── [ 📦 ] requirements.txt          > Python dependencies
-├── [ 🛠️ ] scripts/                  > Shell scripts for setup and CLI detonation
-├── [ 💻 ] src/                      > Core backend application
-│    ┣━ [ 🔌 ] api/                  > FastAPI server, routers, and endpoints
-│    ┣━ [ 🔍 ] extractors/           > eBPF, memory, network, and process parsers
-│    ┣━ [ 🧠 ] llm_bot/              > AI gateway, prompt engineering, synthesis
-│    ┣━ [ ⚙️ ] orchestrator/         > File routing and async task scheduling
-│    ┣━ [ 📦 ] sandboxes/            > Environment runners (Cloud, Hardware, Mobile, PC)
-│    ┣━ [ 🤖 ] bot.py                > Standalone bot execution script
-│    ┗━ [ 🚀 ] main.py               > Application entry point
-├── [ 🗄️ ] storage/                  > Local directory for samples, artifacts, reports
-└── [ 🧪 ] tests/                    > Unit tests for extractors, LLM logic, routing
-                 # Unit tests for extractors, LLM logic, and routing
-
-----------------------------------------------------------------------------------------------
+🚀 Quick Start (One-Command Docker Setup)
+The sandbox architecture consists of multiple services (Orchestrator, Celery Worker, Redis, and Redroid Android Sandbox) connected via Docker Compose.
+To build and spin up the entire sandbox environment in detached mode, run:
