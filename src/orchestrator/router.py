@@ -1,5 +1,5 @@
 import os
-import magic
+import filetype
 
 class FileRouter:
     """Inspects file extension and magic bytes to route payload to runner platform."""
@@ -18,16 +18,17 @@ class FileRouter:
         elif ext in [".exe", ".dll", ".sys"]:
             return "windows"
 
-        # Inspect file magic bytes
-        file_type = magic.from_file(file_path).lower()
+        # Inspect file magic bytes using pure Python filetype
+        kind = filetype.guess(file_path)
+        file_type = f"{kind.mime} {kind.extension}".lower() if kind else ""
 
-        if "pe32" in file_type:
+        if "exe" in file_type or "dll" in file_type or "pe32" in file_type:
             return "windows"
-        elif "elf" in file_type or ext in [".so", ".bin"]:
+        elif "elf" in file_type or "bin" in file_type:
             return "linux"
-        elif "zip" in file_type and ext == ".apk":
+        elif "zip" in file_type or ext == ".apk":
             return "android"
-        elif ext in [".sh", ".py", ".yaml"] or "docker" in file_type:
+        elif "tar" in file_type or "json" in file_type or "yaml" in file_type:
             return "container"
 
         return "windows"  # Default fallback
