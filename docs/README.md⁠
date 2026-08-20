@@ -1,0 +1,15 @@
+# Documentation (`/docs`)
+
+Comprehensive architectural overviews and API references for extending Sandb0x-Xtract0r.
+
+## Contents
+
+* **`ARCHITECTURE.md`**: Deep dive into the execution flow, from initial execution to final payload mapping.
+* **`HEURISTICS.md`**: A living document detailing current sandbox signatures, known Any.Run/Cuckoo artifacts, and evasion success rates.
+* **`API_REFERENCE.md`**: Guidelines on writing custom evasion modules and integrating them into the `evasion/` engine.
+
+## Contributing to Docs
+When adding a new evasion technique, you must update `HEURISTICS.md` with:
+1. The artifact being targeted (e.g., specific registry key).
+2. The logic used to detect or bypass it.
+3. The environments tested against (e.g., Windows 10 22H2, VMWare Workstation 17).
