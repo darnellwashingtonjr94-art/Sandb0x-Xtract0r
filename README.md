@@ -96,6 +96,14 @@ It bridges the gap between low-level kernel tracing and high-level artificial in
    git clone (https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
    cd Sandb0x-Xtract0r
   
+## ⚙️ Configuration & Environment Setup
+
+Before running the sandbox pipeline, you must configure your API keys and environment variables. A template file (`.env.example`) is provided in the root repository.
+
+1. **Copy the template environment file:**
+   ```bash
+   cp .env.example .env
+
 </div>
 
 ## 📂 Full Project Structure
