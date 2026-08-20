@@ -98,7 +98,9 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 git clone [https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git)
 cd SandB0x-Xtract0r
 
-SandB0x-Xtract0r/
+___
+
+## SandB0x-Xtract0r ##
 ├── [ 📄 ] .env.example
 ├── [ 📁 ] .github/
 │   ├── [ 📁 ] ISSUE_TEMPLATE/
