@@ -109,19 +109,23 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 
 **Prerequisites:** Docker, Docker Compose, and a Linux host (recommended for KVM/hardware acceleration).
 
-### 1. Clone the repository
+**1. Clone the repository**
 ```bash
-git clone [https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git)
+git clone
+[https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git]
+
+(https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git)
 cd SandB0x-Xtract0r
 
-### 2. Configuration & Environment Setup
+**2. Configuration & Environment Setup**
+
 Before running the sandbox pipeline, you must configure your API keys and environment variables. A template file (⁠.env.example⁠) is provided in the root repository.
 
 cp .env.example .env
 
 (Edit the new ⁠.env⁠ file with your preferred text editor to add your specific API keys and paths).
 
-🚀 Quick Start (One-Command Docker Setup)
+ 🚀 Quick Start (One-Command Docker Setup)
 
 The sandbox architecture consists of multiple services (Orchestrator, Celery Worker, Redis, and Redroid Android Sandbox) connected via Docker Compose.
 
