@@ -2,6 +2,13 @@
   <img src="IMG_1220.png" alt="SandB0x-Xtract0r Logo" width="600">
 </p>
 
+<p align="center">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
+  <a href="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml"><img src="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml/badge.svg" alt="Unit Tests & Linting"></a>
+  <a href="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/docker.yml"><img src="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/docker.yml/badge.svg" alt="Docker Build & Push"></a>
+  <a href="https://hub.docker.com/r/darnellwashingtonjr94-art/sandbox-api"><img src="https://img.shields.io/docker/pulls/darnellwashingtonjr94-art/sandbox-api.svg" alt="Docker Pulls"></a>
+</p>
+
 <h1 align="center">SandB0x-Xtract0r</h1>
 
 <p align="center">
