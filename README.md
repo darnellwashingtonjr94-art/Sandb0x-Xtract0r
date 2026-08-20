@@ -125,6 +125,4 @@ Sandb0x-Xtract0r/
 └── [ 🧪 ] tests/                    > Unit tests for extractors, LLM logic, routing
                  # Unit tests for extractors, LLM logic, and routing
 
-</div>
-
 ----------------------------------------------------------------------------------------------
