@@ -111,8 +111,8 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git (https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
-cd Sandb0x-Xtract0r
+git clone [https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r.git)
+cd SandB0x-Xtract0r
 
 ### 2. Configuration & Environment Setup
 Before running the sandbox pipeline, you must configure your API keys and environment variables. A template file (⁠.env.example⁠) is provided in the root repository.
