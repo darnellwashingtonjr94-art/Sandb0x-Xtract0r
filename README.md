@@ -91,7 +91,7 @@ It bridges the gap between low-level kernel tracing and high-level artificial in
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/credkellarboop/Sandb0x-Xtract0r.git](https://github.com/credkellarboop/Sandb0x-Xtract0r.git)
+   git clone (https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
    cd Sandb0x-Xtract0r
   
 </div>
