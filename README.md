@@ -56,7 +56,8 @@ https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74
 ## What is this?
 **Sandb0x-Xtract0r** is an automated, cross-platform security analysis engine. It provides a unified environment to safely detonate suspicious files, binaries, and applications across PC, mobile, and cloud environments. While the payload executes, the system captures runtime telemetry, network traces, and memory dumps, which are then synthesized into structured threat reports by an integrated multi-LLM bot.
 
-## BREAK THIS DOWN SO THE YOUTH CAN UNDERSTAND!!!
+⁠### 🎯 Simplified Summary
+
 Imagine you find a mystery package on your porch, but you aren't sure if it's a cool toy or a messy glitter bomb. 
 
 Instead of opening it in your living room, you put the package inside a thick, clear plastic box in your backyard. You use robotic arms to open it while cameras record exactly what happens. If it explodes, the mess stays completely trapped in the box, and your house is safe! 
