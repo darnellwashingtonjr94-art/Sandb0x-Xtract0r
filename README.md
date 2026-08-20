@@ -1,10 +1,15 @@
 <p align="center">
-  <img src="IMG_1220.png" alt="Sandb0x-Xtract0r Logo" width="600">
+  <img src="IMG_1220.png" alt="SandB0x-Xtract0r Logo" width="600">
 </p>
 
-## Sandb0x-Xtract0r 
+<h1 align="center">SandB0x-Xtract0r</h1>
 
-https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74179?fbclid=PAVERFWATzKNNwZG9mAmZkaWQWUM0U-8ATQt9yHtCcxQQewXa_AEws9GV4dG4DYWVtAjEwAHNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABp8nIaumZzQ5wWnPDBkwoi_DAokys-kAi-qJYwey-yG858pLVQTTGerkUKiWn_aem_qxPQoDjSoMgGq1UaThMhLQ     
+<p align="center">
+  <strong>An automated, cross-platform security analysis engine for safely detonating suspicious files, binaries, and applications.</strong><br>
+  <a href="https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74179">🎬 Watch the Project Demo</a>
+</p>
+
+---
 
 ## Tech Stack
 
@@ -50,19 +55,6 @@ https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74
 ![Railway](https://img.shields.io/badge/Railway-0B0D0E?style=for-the-badge&logo=railway&logoColor=white)
 
 </div>
-
----
-
-## What is this?<p align="center">
-  <img src="IMG_1220.png" alt="SandB0x-Xtract0r Logo" width="600">
-</p>
-
-<h1 align="center">SandB0x-Xtract0r</h1>
-
-<p align="center">
-  <strong>An automated, cross-platform security analysis engine for safely detonating suspicious files, binaries, and applications.</strong><br>
-  <a href="https://labs.google/fx/tools/flow/shared/video/d3be83b0-0d20-4747-9945-b81cdac74179">🎬 Watch the Project Demo</a>
-</p>
 
 ---
 
