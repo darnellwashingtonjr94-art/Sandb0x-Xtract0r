@@ -111,7 +111,7 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 
 ### 1. Clone the repository
 ```bash
-git clone [https://github.com/darnellwashington94-art/Sandb0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
+git clone [https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git](https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r.git)
 cd Sandb0x-Xtract0r
 
 -----------------------
