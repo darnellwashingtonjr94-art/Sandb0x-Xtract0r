@@ -1,11 +1,16 @@
 {
-  "name": "@darnellwashingtonjr94-art/sandbox-xtract0r",
+  "name": "@darnellwashingtonjr94-art/sandb0x-xtract0r",
   "version": "0.10.0",
-  "description": "Cross-platform security analysis engine",
+  "description": "An automated cross-platform security analysis engine.",
+  "main": "main.py",
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "build": "tsc"
-  }
+  "keywords": [
+    "security",
+    "pentest",
+    "analysis"
+  ],
+  "author": "darnellwashingtonjr94-art",
+  "license": "MIT"
 }
