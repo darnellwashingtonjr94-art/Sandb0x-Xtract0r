@@ -8,7 +8,7 @@ WORKDIR /app
 # Install system dependencies for analysis and PDF generation
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libmagick1 \
+    libmagickwand-dev \
     tshark \
     wkhtmltopdf \
     qemu-system-x86 \
