@@ -1,8 +1,8 @@
 [package]
-# ... other configurations ...
-include = [
-    "src/**/*",
-    "Cargo.toml",
-    "README.md",
-    "LICENSE"
-]
+name = "sandb0x-xtract0r"
+version = "0.1.0"
+edition = "2021"
+description = "Sandbox extraction, analysis, and orchestration engine"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/your-username/Sandb0x-Xtract0r"
