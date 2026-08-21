@@ -5,10 +5,10 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# Install system dependencies for analysis tools and PDF generation
+# Install system dependencies for analysis and PDF generation
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libmagic1 \
+    libmagick1 \
     tshark \
     wkhtmltopdf \
     qemu-system-x86 \
@@ -22,3 +22,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY requirements.txt .
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+CMD ["python", "main.py"]
