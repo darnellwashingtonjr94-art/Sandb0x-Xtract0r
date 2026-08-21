@@ -3,35 +3,36 @@ name: Publish to PyPI
 on:
   release:
     types: [published]
+  workflow_dispatch:  # Allows manual triggers from the Actions tab
 
 jobs:
   pypi-publish:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
     
+    # Required permissions for Trusted Publishers (OIDC)
     permissions:
-      # IMPORTANT: mandatory for trusted publishing or API token security
       id-token: write
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.10"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
-    - name: Install build dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install build
+      - name: Install build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install build
 
-    - name: Build package wheels and source tarball
-      run: python -m build
+      - name: Build package wheels and source tarball
+        run: python -m build
+        working-directory: ./Sandb0x-Xtract0r/Sandb0x-Xtract0r  # Points to the folder containing your setup.py
 
-    - name: Publish package to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
-      # Alternatively, if using a standard PyPI API Token instead of Trusted Publishers:
-      # with:
-      #   password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: Publish package to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: ./Sandb0x-Xtract0r/Sandb0x-Xtract0r/dist/  # Points to the generated dist folder
