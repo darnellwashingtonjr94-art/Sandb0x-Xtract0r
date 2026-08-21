@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sandbox-xtractor"
+version = "0.1.0"
+authors = [
+  { name="Darion Kellar", email="credkellar@gmail.com" },
+]
+description = "An open-source LLM-powered malware sandbox extractor."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+]
+dependencies = [
+    "google-genai>=0.1.1",
+    "anthropic>=0.18.0",
+    "openai>=1.12.0",
+    "filetype>=1.2.0",
+    "pyyaml>=6.0.1",
+    "pydantic>=2.6.0",
+    "celery>=5.3.6",
+    "redis>=5.0.1",
+    "requests>=2.31.0",
+    "markdown2>=2.4.12",
+    "pdfkit>=1.0.0",
+    "pytest>=8.0.0"
+]
+
+[project.scripts]
+# This exposes the global terminal command
+sandbox-xtractor = "sandbox_xtractor.main:main"
+
+[project.urls]
+Homepage = "https://github.com/darnellwashingtonjr94-art/sandbox-xtractor"
+Issues = "https://github.com/darnellwashingtonjr94-art/sandbox-xtractor/issues"
