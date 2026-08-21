@@ -3,14 +3,12 @@ name: Publish to PyPI
 on:
   release:
     types: [published]
-  workflow_dispatch:  # Allows manual triggers from the Actions tab
+  workflow_dispatch:
 
 jobs:
   pypi-publish:
     name: Upload release to PyPI
     runs-on: ubuntu-latest
-    
-    # Required permissions for Trusted Publishers (OIDC)
     permissions:
       id-token: write
 
@@ -30,9 +28,6 @@ jobs:
 
       - name: Build package wheels and source tarball
         run: python -m build
-        working-directory: ./Sandb0x-Xtract0r/Sandb0x-Xtract0r  # Points to the folder containing your setup.py
 
       - name: Publish package to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          packages-dir: ./Sandb0x-Xtract0r/Sandb0x-Xtract0r/dist/  # Points to the generated dist folder
