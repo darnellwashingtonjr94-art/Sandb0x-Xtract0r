@@ -7,7 +7,7 @@ use sandb0x_xtract0r::orchestrator;
 use sandb0x_xtract0r::extractors;
 
 #[derive(Parser)]
-#[command(name = "xtract0r")]
+#[command(name = "Xtract0r")]
 #[command(about = "Sandbox extraction and orchestration engine CLI")]
 struct Cli {
     #[command(subcommand)]
@@ -27,5 +27,24 @@ enum Commands {
         /// Filepath to the sandbox output
         #[arg(short, long)]
         path: String,
-    },
+    }
+}
+
+fn main() {
+    let cli = Cli::parse();
+
+    match &cli.command {
+        Commands::Orchestrate { target } => {
+            println!("Starting orchestrator for target: {}", target);
+
+            #[cfg(feature = "orchestrator")]
+            orchestrator::run_sandbox(target); // Assuming this function takes a target string
+        }
+        Commands::Extract { path } => {
+            println!("Running extractors on path: {}", path);
+
+            #[cfg(feature = "extractors")]
+            extractors::parse_output(path); // Assuming this function takes a path string
+        }
+    }
 }
