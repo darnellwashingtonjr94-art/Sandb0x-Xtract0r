@@ -72,12 +72,51 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 
 ## 🛠️ How does this work?
 
-1. **Submission:** A user uploads a suspicious file via the React-based frontend UI or directly through the FastAPI endpoint.
-2. **File Routing:** The Orchestrator inspects the file's magic bytes to automatically detect the target platform (e.g., routing an APK to the Redroid Android emulator, or an ELF file to a Linux Firecracker microVM).
-3. **Execution & Tracing:** The payload is injected into the highly isolated sandbox. Hooks record API calls, network requests, and spawned processes.
-4. **Data Normalization:** Once the execution times out or completes, the Extractor module pulls the raw data (PCAPs, memory strings, registry edits) and normalizes it.
-5. **LLM Analysis:** The normalized telemetry is sent to the `llm_bot`, which queries the configured AI models to write a comprehensive security assessment.
-6. **Reporting:** The user receives a detailed Markdown or PDF report detailing the payload's intent, lateral movement, and C2 (Command and Control) activity.
+## 🛠️ What You Need First (The Builder Tools)
+Before you can build your safe plastic box, you need the right tools:
+* **🐧 A Linux Computer:** The creator says it is best to use a computer with a Linux operating system. Linux has special hardware powers (called KVM) to make the testing run super fast!
+* **🐳 Docker & Docker Compose:** These are like magical shipping containers. They hold all the different parts of the project safely inside so they don't get mixed up with your computer's normal files.
+
+---
+
+## 📥 Step 1: Bring the Blueprints to Your Computer
+First, we need to download the project folders so your computer knows what to build.
+1. Open your computer's command line (the black screen where you type commands).
+2. Type a `git clone` command to download the Sandb0x-Xtract0r project straight from GitHub.
+3. Next, open the folder you just downloaded by typing `cd Sandb0x-Xtract0r`.
+
+---
+
+## 🔑 Step 2: Give the Robots Their Secret Keys
+To make the tool super smart, you have to wake up the AI robot brains! 🧠
+1. Look in the folder for a file named `.env.example`.
+2. Inside this file, there are blank spaces. You need to paste your secret passwords (called API keys) for different AI models like Google Gemini, Anthropic Claude, and OpenAI ChatGPT. 
+
+---
+
+## 🧩 Step 3: Add the Extra Puzzle Pieces
+The tool needs some extra little helper programs to work perfectly. 
+1. Look at the `packages.txt` file. It says you need to install a special helper called `libmagic1`.
+2. Look at the `requirements.txt` file. This tells your computer to install Python helpers, like `pdfkit` to make reading the final reports easy, and `celery` to manage heavy lifting!
+
+---
+
+## 🏗️ Step 4: Build the Safe Testing Rooms
+Now you tell Docker to build all the special rooms for testing! 🏠
+* The project uses a big instruction manual called `docker-compose.yml`.
+* When you run it, Docker will magically create a few cool things:
+  * 👨‍✈️ **An Orchestrator:** The boss that tells everyone what to do.
+  * ✉️ **Redis:** The fast messenger pigeon that carries notes.
+  * 🏋️ **A Celery Worker:** The strong helper doing the heavy lifting and running the tests.
+  * 📱 **An Android Sandbox (Redroid):** A fake phone space to safely test mobile apps.
+
+---
+
+## 🚀 Step 5: Test a Mystery File!
+Once everything is built and running smoothly, you are ready to use it! 🎉
+1. Submit a suspicious file into the system.
+2. The system traps the file in the safe box and watches everything it tries to do. 👀
+3. The smart AI robots read the notes and write a super detailed report telling you exactly how dangerous the file really was! 🛡️
 
 ---
 
