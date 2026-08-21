@@ -18,7 +18,6 @@
   <a href="https://www.rust-lang.org">
     <img src="https://img.shields.io/badge/rust-1.70%2B-blue.svg" alt="Rust Version">
   </a>
-  <a href="https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml">
     <img src="https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml/badge.svg" alt="Unit Tests & Linting">
   </a>
   <a href="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml"><img src="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml/badge.svg" alt="Unit Tests & Linting"></a>
