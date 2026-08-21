@@ -19,7 +19,7 @@ jobs:
 
       - name: Ensure Fly App Exists
         run: |
-          flyctl apps create sandb0x-xtractor --org personal || true
+          flyctl apps create sandb0x-xtractor || true
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
