@@ -1,0 +1,11 @@
+{
+  "name": "@darnellwashingtonjr94-art/sandbox-xtract0r",
+  "version": "0.10.0",
+  "description": "Cross-platform security analysis engine",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
