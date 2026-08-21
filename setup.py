@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="sandb0x-xtractor",  # MUST match your PyPI project name exactly
-    version="0.1.0",         # Update version if needed
+    version="0.1.1",         # Update version if needed
     author="darnellwashingtonjr94-art",
     description="An automated cross-platform security analysis engine",
     long_description=open("README.md", encoding="utf-8").read() if "README.md" in __import__("os").listdir(".") else "",
