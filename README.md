@@ -70,8 +70,6 @@ Imagine you find a mystery package on your porch, but you aren't sure if it's a 
 
 ---
 
-## 🛠️ How does this work?
-
 ## 🛠️ What You Need First (The Builder Tools)
 Before you can build your safe plastic box, you need the right tools:
 * **🐧 A Linux Computer:** The creator says it is best to use a computer with a Linux operating system. Linux has special hardware powers (called KVM) to make the testing run super fast!
