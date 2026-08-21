@@ -6,9 +6,21 @@
 
 <p align="center">
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT"></a>
-[![Crates.io Version](https://img.shields.io/crates/v/sandb0x-xtract0r.svg)](https://crates.io/crates/sandb0x-xtract0r)
-[![Docs.rs](https://docs.rs/sandb0x-xtract0r/badge.svg)](https://docs.rs/sandb0x-xtract0r)
-[![Rust Version](https://img.shields.io/badge/rust-1.70%2B-blue.svg)](https://www.rust-lang.org)
+<p align="center">
+  <a href="https://crates.io/crates/sandb0x-xtract0r">
+    <img src="https://img.shields.io/crates/v/sandb0x-xtract0r.svg" alt="Crates.io Version">
+  </a>
+  <a href="https://docs.rs/sandb0x-xtract0r">
+    <img src="https://docs.rs/sandb0x-xtract0r/badge.svg" alt="Docs.rs">
+  </a>
+  <a href="https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/blob/main/Cargo.toml">
+  </a>
+  <a href="https://www.rust-lang.org">
+    <img src="https://img.shields.io/badge/rust-1.70%2B-blue.svg" alt="Rust Version">
+  </a>
+  <a href="https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml">
+    <img src="https://github.com/darnellwashingtonjr94-art/Sandb0x-Xtract0r/actions/workflows/test.yml/badge.svg" alt="Unit Tests & Linting">
+  </a>
   <a href="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml"><img src="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/test.yml/badge.svg" alt="Unit Tests & Linting"></a>
   <a href="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/docker.yml"><img src="https://github.com/darnellwashingtonjr94-art/SandB0x-Xtract0r/actions/workflows/docker.yml/badge.svg" alt="Docker Build & Push"></a>
   <a href="https://hub.docker.com/r/credkellar/sandbox-api"><img src="https://img.shields.io/docker/pulls/credkellar/sandbox-api.svg" alt="Docker Pulls"></a>
