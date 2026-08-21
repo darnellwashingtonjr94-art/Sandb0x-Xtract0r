@@ -21,3 +21,4 @@ sandboxes = ["core"]
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 tokio = { version = "1.37", features = ["full"], optional = true }
+clap = { version = "4.5", features = ["derive"] }
