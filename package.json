@@ -1,6 +1,6 @@
 {
   "name": "@credkellar/sandb0x-xtract0r",
-  "version": "0.10.0",
+  "version": "0.15.0",
   "description": "An automated cross-platform security analysis engine.",
   "main": "main.py",
   "publishConfig": {
