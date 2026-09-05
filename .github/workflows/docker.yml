@@ -3,8 +3,12 @@ name: build-and-push
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
   pull_request:
     branches: [ "main" ]
+    paths-ignore:
+      - '**.md'
 
 jobs:
   build:
@@ -34,6 +38,21 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
+          images: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/xtractor
+            ghcr.io/${{ github.repository }}
+          labels: |
+            org.opencontainers.image.description=Sandbox-Xtractor is an automated cross-platform security analysis engine. It safely detonates suspicious files across PC, mobile, and cloud environments while capturing execution telemetry, network traffic, file system diffs, API traces, and memory dumps. An integrated multi-LLM bot (Gemini, Claude, ChatGPT, Codex) synthesizes data into structured threat reports.
+            
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           images: |
             ${{ secrets.DOCKERHUB_USERNAME }}/xtractor
             ghcr.io/${{ github.repository }}
