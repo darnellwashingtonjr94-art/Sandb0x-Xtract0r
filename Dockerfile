@@ -1,9 +1,9 @@
-FROM debian:bullseye-slim
+FROM debian:bookworm-slim
 
 # Suppress interactive prompts during package installation
 ARG DEBIAN_FRONTEND=noninteractive
 
-# Update and install dependencies with --fix-missing to handle mirror sync issues
+# Update and install dependencies cleanly on a modern Debian base
 RUN apt-get update && \
     apt-get install -y --no-install-recommends --fix-missing \
     build-essential \
