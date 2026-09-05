@@ -17,8 +17,3 @@ RUN apt-get update && \
     git \
     curl && \
     rm -rf /var/lib/apt/lists/*
-
-# Add the rest of your application code and instructions below
-# COPY . /app
-# WORKDIR /app
-# CMD ["your-start-command"]
