@@ -1,12 +1,11 @@
-FROM python:3.11-slim-bullseye
+FROM debian:bullseye-slim
 
-ENV PYTHONUNBUFFERED=1 \
-    DEBIAN_FRONTEND=noninteractive
+# Suppress interactive prompts during package installation
+ARG DEBIAN_FRONTEND=noninteractive
 
-WORKDIR /app
-
-# Install system dependencies for analysis and PDF generation
-RUN apt-get update && apt-get install -y --no-install-recommends \
+# Update and install dependencies
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
     build-essential \
     libmagickwand-dev \
     tshark \
@@ -16,13 +15,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     adb \
     docker.io \
     git \
-    curl \
-    && rm -rf /var/lib/apt/lists/*
+    curl && \
+    rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
-RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
-
-COPY . .
-
-CMD ["python", "main.py"]
+# Add the rest of your application code and instructions below
+# COPY . /app
+# WORKDIR /app
+# CMD ["your-start-command"]
